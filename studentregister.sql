@@ -23,7 +23,7 @@ group by student.idstudent;
 #what means inner?
 insert into student(firstname, lastname) values('Daniel', 'Hope');
 
-# shows also the students that have no grade (assigned as null), both under are the same
+# shows  the students with no grade (assigned as null), both under are the same
 select student.idstudent,firstname,lastname, group_concat(grade)
 from student left join grade on student.idstudent=grade.idstudent
 group by student.idstudent;
@@ -32,7 +32,7 @@ select student.idstudent,firstname,lastname, group_concat(grade)
 from grade right join student on student.idstudent=grade.idstudent
 group by student.idstudent;
 
-#what courses has the student passed
+#what courses the student has passed
 #show student names and courses names
 select firstname, lastname, name
 from student inner join grade on student.idstudent=grade.idstudent
