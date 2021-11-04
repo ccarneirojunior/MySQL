@@ -1,3 +1,5 @@
+//NOTES FROM CLASS
+
 SELECT * FROM studentregister.student;
 
 select lastname, group_concat(firstname) from student group by lastname;
